@@ -39,6 +39,24 @@
         a:hover { 
             text-decoration: underline; 
         }
+        .download-button {
+            display: inline-block;
+            width: 200px; /* 按钮宽度 */
+            height: 70px; /* 按钮高度 */
+            line-height: 70px; /* 让文字垂直居中 */
+            font-size: 24px; /* 放大文字 */
+            text-align: center; /* 让文字水平居中 */
+            color: white;
+            background-color: green; /* 绿色背景 */
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .download-button:hover {
+            background-color: darkgreen; /* 悬停时的深绿色背景 */
+        }
     </style>
 </head>
 <body>
@@ -78,11 +96,10 @@
         <br>
         
         <h2 style="color: red; font-weight: bold; text-align: center;">点击下载2</h2>
-        <button class="download-button" onclick="copyAndRedirect()">点击下载</button>
+        <button class="download-button" onclick="copyAndRedirect()">点击下载2</button>
         <script>
             function copyAndRedirect() {
                 const link = "https://www.pgyer.com/app/build/80848ff881b4ffff4c9525262ebd7413";
-
                 // 复制到剪贴板
                 navigator.clipboard.writeText(link).then(() => {
                     alert("链接已复制到剪贴板！");
@@ -96,6 +113,20 @@
         <p><a href="https://www.51pgzs.com/app/47928.html" target="_blank">https://www.pgyer.com/app/build/80848ff881b4ffff4c9525262ebd7413</a></p>
 
         <h2 style="color: red; font-weight: bold; text-align: center;">点击下载3</h2>
+        <button class="download-button" onclick="copyAndRedirect()">点击下载3</button>
+        <script>
+            function copyAndRedirect() {
+                const link = "https://www.51pgzs.com/app/47928.html";
+                // 复制到剪贴板
+                navigator.clipboard.writeText(link).then(() => {
+                    alert("链接已复制到剪贴板！");
+                }).catch(err => {
+                    alert("复制失败，请手动复制链接：" + link);
+                });
+                // 跳转到链接
+                window.open(link, "_blank");
+            }
+        </script>
         <p><a href="https://www.51pgzs.com/app/47928.html" target="_blank">https://www.51pgzs.com/app/47928.html</a></p>
 
         <h1>温馨提示</h1>
