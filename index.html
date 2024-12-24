@@ -20,7 +20,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
             border-radius: 8px; 
         }
-        img, video { 
+        img, video, iframe { 
             max-width: 100%; 
             height: auto; 
             margin-bottom: 20px; 
@@ -28,6 +28,7 @@
         }
         h1, h2 { 
             color: #333; 
+            text-align: center;
         }
         p { 
             margin: 10px 0; 
@@ -40,15 +41,15 @@
             text-decoration: underline; 
         }
         .download-button {
-            display: block; /* 设置为块级元素 */
-            margin: 20px auto; /* 自动水平居中，设置上下外边距 */
-            width: 500px; /* 按钮宽度 */
-            height: 50px; /* 按钮高度 */
-            line-height: 50px; /* 让文字垂直居中 */
-            font-size: 24px; /* 放大文字 */
-            text-align: center; /* 让文字水平居中 */
+            display: block; 
+            margin: 20px auto; 
+            width: 500px; 
+            height: 50px; 
+            line-height: 50px; 
+            font-size: 24px; 
+            text-align: center; 
             color: white;
-            background-color: green; /* 绿色背景 */
+            background-color: green; 
             border: none;
             border-radius: 10px;
             text-decoration: none;
@@ -56,101 +57,71 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .download-button:hover {
-            background-color: darkgreen; /* 悬停时的深绿色背景 */
+            background-color: darkgreen; 
+        }
+        .note {
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <div class="container",style="text-align: center; width: 100%; max-width: 360px; margin: auto; overflow: hidden;">
-        <h1 style="text-align: center;">扫码看打印教程</h1>
-        <h2 style="color: red; font-weight: bold; text-align: center;">（视频中的软件点击下方链接按钮就可以下载）</h2>
-        <p><a href="https://www.51pgzs.com/app/47928.html" target="_blank">https://wwqa.lanzouq.com/iwu1W17fmu0b</a></p>
-        <button class="download-button" onclick="copyAndRedirect()">点击下载</button>
+    <div class="container">
+        <h1>扫码看打印教程</h1>
+        <h2 style="color: red; font-weight: bold;">视频中的软件点击下方链接按钮即可下载</h2>
+        <p><a href="https://wwqa.lanzouq.com/iwu1W17fmu0b" target="_blank">https://wwqa.lanzouq.com/iwu1W17fmu0b</a></p>
+        
+        <button class="download-button" onclick="copyAndRedirect('https://wwqa.lanzouq.com/iwu1W17fmu0b')">点击下载</button>
+
         <script>
-            function copyAndRedirect() {
-                const link = "https://wwqa.lanzouq.com/iwu1W17fmu0b";
-                // 复制到剪贴板
+            function copyAndRedirect(link) {
                 navigator.clipboard.writeText(link).then(() => {
                     alert("链接已复制到剪贴板！");
                 }).catch(err => {
                     alert("复制失败，请手动复制链接：" + link);
                 });
-                // 跳转到链接
                 window.open(link, "_blank");
             }
         </script>
 
-        
-        <p>如果是 
-            <span style="color: red; font-weight: bold; font-size: 18px;">微信扫码</span>，
-            请复制上述网址并粘贴到浏览器下载</p>
+        <p>如果是 <span class="note">微信扫码</span>，请复制上述网址并粘贴到浏览器下载</p>
         <p><a href="https://www.51pgzs.com/app/47928.html" target="_blank">https://www.51pgzs.com/app/47928.html</a></p>
-        <p>软件下载完成后，<span style="color: red; font-weight: bold; font-size: 18px;">往下滑</span>，可查看打印文件和图片的教程</p>
-        <p><span style="color: black; font-weight: bold; font-size: 18px;">注意：软件是永久免费的，若显示收费，说明下载错误，请联系客服重新下载</span></p>
-        <br>
-        
-        <p><span style="color: red; font-weight: bold; font-size: 18px;">特别提示：OPPO 和 VIVO </span>手机需要提前打开<span style="color: red; font-weight: bold; font-size: 18px;"> OTG </span>功能。
-            一般在设置 > 更多设置（或其他设置）里，VIVO 的 OTG 在其他网络与连接中。其他品牌手机无需打开</p>
-        <p><span style="color: red; font-weight: bold; font-size: 18px;">PS：请移除手机壳以确保连接顺畅</span></p>
-        <br>
-        
-        <h2 style="text-align: center;"><strong>打印测试页教程</strong></h2>
-        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113701189391383&bvid=BV1emCGYrERK&cid=27488616676&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+        <p>软件下载完成后，<span class="note">往下滑</span>，可查看打印文件和图片的教程</p>
+        <p><span class="note">注意：软件是永久免费的，若显示收费，说明下载错误，请联系客服重新下载</span></p>
+
+        <p><span class="note">特别提示：OPPO 和 VIVO </span>手机需要提前打开 <span class="note">OTG</span> 功能。一般在设置 > 更多设置（或其他设置）里，VIVO 的 OTG 在其他网络与连接中。其他品牌手机无需打开</p>
+        <p><span class="note">PS：请移除手机壳以确保连接顺畅</span></p>
+
+        <h2><strong>打印测试页教程</strong></h2>
         <iframe 
-        src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1emCGYrERK&cid=27488616676&p=1" 
-        frameborder="0" 
-        allowfullscreen 
-        style="width: 100%; height: calc(100vw * 16 / 9); max-height: 640px; border: none;">
+            src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1emCGYrERK&cid=27488616676&p=1" 
+            frameborder="0" 
+            allowfullscreen 
+            style="width: 100%; height: calc(100vw * 16 / 9); max-height: 640px; border: none;">
         </iframe>
-        <br>
-        
-        <h2 style="text-align: center;"><strong>打印文件教程 ~ WPS文件</strong></h2>
-        <video controls>
-            <source src="https://cuigd.github.io/jc2024.github.io/打印文件教程.mp4" type="video/mp4">
-            您的浏览器不支持视频播放。
-        </video>
-        <br>
-        
-        <h2 style="text-align: center;"><strong>打印图片教程</strong></h2>
-        <video controls>
-            <source src="https://cuigd.github.io/jc2024.github.io/打印图片教程.mp4" type="video/mp4">
-            您的浏览器不支持视频播放。
-        </video>
-        <br>
-        
-        <h2 style="color: red; font-weight: bold; text-align: center;">点击下载2</h2>
-        <button class="download-button" onclick="copyAndRedirect()">点击下载2</button>
-        <script>
-            function copyAndRedirect() {
-                const link = "https://www.pgyer.com/app/build/80848ff881b4ffff4c9525262ebd7413";
-                // 复制到剪贴板
-                navigator.clipboard.writeText(link).then(() => {
-                    alert("链接已复制到剪贴板！");
-                }).catch(err => {
-                    alert("复制失败，请手动复制链接：" + link);
-                });
-                // 跳转到链接
-                window.open(link, "_blank");
-            }
-        </script>
-        <p><a href="https://www.51pgzs.com/app/47928.html" target="_blank">https://www.pgyer.com/app/build/80848ff881b4ffff4c9525262ebd7413</a></p>
 
-        <h2 style="color: red; font-weight: bold; text-align: center;">点击下载3</h2>
-        <button class="download-button" onclick="copyAndRedirect()">点击下载3</button>
-        <script>
-            function copyAndRedirect() {
-                const link = "https://www.51pgzs.com/app/47928.html";
-                // 复制到剪贴板
-                navigator.clipboard.writeText(link).then(() => {
-                    alert("链接已复制到剪贴板！");
-                }).catch(err => {
-                    alert("复制失败，请手动复制链接：" + link);
-                });
-                // 跳转到链接
-                window.open(link, "_blank");
-            }
-        </script>
-        <p><a href="https://www.51pgzs.com/app/47928.html" target="_blank">https://www.51pgzs.com/app/47928.html</a></p>
+        <h2><strong>打印文件教程 ~ WPS文件</strong></h2>
+        <iframe 
+            src="//player.bilibili.com/player.html?isOutside=true&aid=113701340321803&bvid=BV1WtCGYsEtK&cid=27489208778&p=1" 
+            frameborder="0" 
+            allowfullscreen 
+            style="width: 100%; height: calc(100vw * 16 / 9); max-height: 640px; border: none;">
+        </iframe>
+
+        <h2><strong>打印图片教程</strong></h2>
+        <iframe 
+            src="//player.bilibili.com/player.html?isOutside=true&aid=113701340387438&bvid=BV1CtCGYsEde&cid=27489274817&p=1" 
+            frameborder="0" 
+            allowfullscreen 
+            style="width: 100%; height: calc(100vw * 16 / 9); max-height: 640px; border: none;">
+        </iframe>
+
+        <h2 style="color: red; font-weight: bold;">点击下载2</h2>
+        <button class="download-button" onclick="copyAndRedirect('https://www.pgyer.com/app/build/80848ff881b4ffff4c9525262ebd7413')">点击下载2</button>
+
+        <h2 style="color: red; font-weight: bold;">点击下载3</h2>
+        <button class="download-button" onclick="copyAndRedirect('https://www.51pgzs.com/app/47928.html')">点击下载3</button>
 
         <h1>温馨提示</h1>
         <p>请购买专用连接线，普通 OTG 连接线可能导致打印速度变慢、延迟或卡顿等故障。</p>
