@@ -65,6 +65,22 @@
         <h1 style="text-align: center;">扫码看打印教程</h1>
         <h2 style="color: red; font-weight: bold; text-align: center;">（视频中的软件点击下方链接按钮就可以下载）</h2>
         <p><a href="https://www.51pgzs.com/app/47928.html" target="_blank">https://wwqa.lanzouq.com/iwu1W17fmu0b</a></p>
+        <button class="download-button" onclick="copyAndRedirect()">点击下载</button>
+        <script>
+            function copyAndRedirect() {
+                const link = "https://wwqa.lanzouq.com/iwu1W17fmu0b";
+                // 复制到剪贴板
+                navigator.clipboard.writeText(link).then(() => {
+                    alert("链接已复制到剪贴板！");
+                }).catch(err => {
+                    alert("复制失败，请手动复制链接：" + link);
+                });
+                // 跳转到链接
+                window.open(link, "_blank");
+            }
+        </script>
+
+        
         <p>如果是 
             <span style="color: red; font-weight: bold; font-size: 18px;">微信扫码</span>，
             请复制上述网址并粘贴到浏览器下载</p>
