@@ -45,16 +45,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 20px 0;
-            padding: 0 10px; /* 防止按钮紧贴白色容器的边界 */
+            margin: 20px auto; /* 确保按钮始终居中 */
+            width: 100%; /* 容器占满父元素 */
         }
-
+        
         .download-button {
-            width: 100%; /* 让按钮占满容器宽度 */
-            max-width: 400px; /* 限制按钮最大宽度，避免超出白色框 */
+            width: 90%; /* 限制按钮宽度，不占满整个屏幕 */
+            max-width: 350px; /* 在大屏幕上限制最大宽度 */
             height: 50px; 
             line-height: 50px; 
-            font-size: 18px; /* 调整字体大小 */
+            font-size: 18px;
             text-align: center; 
             color: white;
             background-color: green; 
@@ -63,8 +63,8 @@
             text-decoration: none;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* 确保 padding 不会影响实际宽度 */
         }
-
         .download-button:hover {
             background-color: darkgreen; 
         }
