@@ -12,32 +12,6 @@
             line-height: 1.6; 
             background-color: #f9f9f9; 
         }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-        }
-        
-        .download-button {
-            width: 90%; /* 默认占满 90% 宽度 */
-            max-width: 500px; /* 但不超过 500px */
-            height: 50px; 
-            line-height: 50px; 
-            font-size: 18px; /* 调整字体大小 */
-            text-align: center; 
-            color: white;
-            background-color: green; 
-            border: none;
-            border-radius: 10px;
-            text-decoration: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .download-button:hover {
-            background-color: darkgreen; 
-        }
         .container { 
             max-width: 800px; 
             margin: 20px auto; 
@@ -45,12 +19,6 @@
             background: #fff; 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
             border-radius: 8px; 
-        }
-        img, video, iframe { 
-            max-width: 100%; 
-            height: auto; 
-            margin-bottom: 20px; 
-            display: block; 
         }
         h1, h2 { 
             color: #333; 
@@ -66,13 +34,27 @@
         a:hover { 
             text-decoration: underline; 
         }
+        .note {
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* 让按钮在手机端和PC端都居中 */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            padding: 0 10px; /* 防止按钮紧贴白色容器的边界 */
+        }
+
         .download-button {
-            display: block; 
-            margin: 20px auto; 
-            width: 500px; 
+            width: 100%; /* 让按钮占满容器宽度 */
+            max-width: 400px; /* 限制按钮最大宽度，避免超出白色框 */
             height: 50px; 
             line-height: 50px; 
-            font-size: 24px; 
+            font-size: 18px; /* 调整字体大小 */
             text-align: center; 
             color: white;
             background-color: green; 
@@ -82,23 +64,20 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .download-button:hover {
             background-color: darkgreen; 
-        }
-        .note {
-            color: red;
-            font-weight: bold;
-            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <div class="button-container">
+    <div class="container">
         <h1>扫码看打印教程</h1>
         <h2 style="color: red; font-weight: bold;">视频中的软件点击下方链接按钮即可下载</h2>
-<!--         <p><a href="https://wwqa.lanzouq.com/iwu1W17fmu0b" target="_blank">https://wwqa.lanzouq.com/iwu1W17fmu0b</a></p> -->
-        
-        <button class="download-button" onclick="copyAndRedirect('https://wwqa.lanzouq.com/iwu1W17fmu0b')">点击下载</button>
+
+        <div class="button-container">
+            <button class="download-button" onclick="copyAndRedirect('https://wwqa.lanzouq.com/iwu1W17fmu0b')">点击下载</button>
+        </div>
 
         <script>
             function copyAndRedirect(link) {
@@ -112,12 +91,8 @@
         </script>
 
         <p>如果是 <span class="note">微信扫码</span>，请复制上述网址并粘贴到浏览器下载</p>
-        <p><a href="https://www.51pgzs.com/app/47928.html" target="_blank">https://www.51pgzs.com/app/47928.html</a></p>
         <p>软件下载完成后，<span class="note">往下滑</span>，可查看打印文件和图片的教程</p>
         <p><span class="note">注意：软件是免费的并且没有广告，如果下载的软件收费或者有广告请联系客服重新下载</span></p>
-
-<!--         <p><span class="note">特别提示：OPPO 和 VIVO </span>手机需要提前打开 <span class="note">OTG</span> 功能。一般在设置 > 更多设置（或其他设置）里，VIVO 的 OTG 在其他网络与连接中。其他品牌手机无需打开</p> -->
-        <p><span class="note">PS：请移除手机壳以确保连接顺畅</span></p>
 
         <h2><strong>打印测试页教程</strong></h2>
         <iframe 
@@ -144,13 +119,15 @@
         </iframe>
 
         <h2 style="color: red; font-weight: bold;">点击下载2</h2>
-        <button class="download-button" onclick="copyAndRedirect('https://www.pgyer.com/app/build/80848ff881b4ffff4c9525262ebd7413')">点击下载2</button>
+        <div class="button-container">
+            <button class="download-button" onclick="copyAndRedirect('https://www.pgyer.com/app/build/80848ff881b4ffff4c9525262ebd7413')">点击下载2</button>
+        </div>
 
         <h2 style="color: red; font-weight: bold;">点击下载3</h2>
-        <button class="download-button" onclick="copyAndRedirect('https://www.51pgzs.com/app/47928.html')">点击下载3</button>
-        <button class="download-button" onclick="copyAndRedirect('https://www.51pgzs.com/app/47928.html')">
-            点击下载3
-        </button>
+        <div class="button-container">
+            <button class="download-button" onclick="copyAndRedirect('https://www.51pgzs.com/app/47928.html')">点击下载3</button>
+        </div>
+
         <h1>温馨提示</h1>
         <p>请购买专用连接线，普通 OTG 连接线可能导致打印速度变慢、延迟或卡顿等故障。</p>
     </div>
