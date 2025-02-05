@@ -12,6 +12,32 @@
             line-height: 1.6; 
             background-color: #f9f9f9; 
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .download-button {
+            width: 90%; /* 默认占满 90% 宽度 */
+            max-width: 500px; /* 但不超过 500px */
+            height: 50px; 
+            line-height: 50px; 
+            font-size: 18px; /* 调整字体大小 */
+            text-align: center; 
+            color: white;
+            background-color: green; 
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .download-button:hover {
+            background-color: darkgreen; 
+        }
         .container { 
             max-width: 800px; 
             margin: 20px auto; 
@@ -67,7 +93,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="button-container">
         <h1>扫码看打印教程</h1>
         <h2 style="color: red; font-weight: bold;">视频中的软件点击下方链接按钮即可下载</h2>
 <!--         <p><a href="https://wwqa.lanzouq.com/iwu1W17fmu0b" target="_blank">https://wwqa.lanzouq.com/iwu1W17fmu0b</a></p> -->
@@ -122,7 +148,9 @@
 
         <h2 style="color: red; font-weight: bold;">点击下载3</h2>
         <button class="download-button" onclick="copyAndRedirect('https://www.51pgzs.com/app/47928.html')">点击下载3</button>
-
+        <button class="download-button" onclick="copyAndRedirect('https://www.51pgzs.com/app/47928.html')">
+            点击下载3
+        </button>
         <h1>温馨提示</h1>
         <p>请购买专用连接线，普通 OTG 连接线可能导致打印速度变慢、延迟或卡顿等故障。</p>
     </div>
