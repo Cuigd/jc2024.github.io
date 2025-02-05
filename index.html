@@ -19,6 +19,7 @@
             background: #fff; 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
             border-radius: 8px; 
+            overflow: hidden; /* 解决微信浏览器可能导致的溢出问题 */
         }
         h1, h2 { 
             color: #333; 
@@ -42,31 +43,30 @@
 
         /* 让按钮在手机端和PC端都居中 */
         .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto; /* 确保按钮始终居中 */
-            width: 100%; /* 容器占满父元素 */
+            text-align: center; /* 兼容微信端 */
+            margin: 20px auto; /* 确保按钮居中 */
+            width: 100%; /* 避免微信浏览器错误扩展 */
         }
         
         .download-button {
-            width: 90%; /* 限制按钮宽度，不占满整个屏幕 */
-            max-width: 350px; /* 在大屏幕上限制最大宽度 */
-            height: 50px; 
-            line-height: 50px; 
+            width: 85%; /* 让按钮占据合适宽度，避免超出 */
+            max-width: 320px; /* 限制最大宽度，防止溢出 */
+            height: 50px;
+            line-height: 50px;
             font-size: 18px;
-            text-align: center; 
+            text-align: center;
             color: white;
-            background-color: green; 
+            background-color: green;
             border: none;
             border-radius: 10px;
             text-decoration: none;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box; /* 确保 padding 不会影响实际宽度 */
+            box-sizing: border-box; /* 解决微信端 padding 计算错误 */
         }
+        
         .download-button:hover {
-            background-color: darkgreen; 
+            background-color: darkgreen;
         }
     </style>
 </head>
